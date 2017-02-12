@@ -3,12 +3,12 @@ import { Text, View } from 'react-native';
 // purpose of View tag is to position the Text tag correctly
 
 // create a component
-const Header = () => {
+const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Albums!</Text>
+      <Text style={textStyle}>{props.headerText}</Text>
     </View>
   );
 };
